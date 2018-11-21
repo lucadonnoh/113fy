@@ -1,9 +1,4 @@
-html, body {    
-    margin:0; /* remove default margin */
-    padding:0; /* remove default padding */
-    width:100%; /* take full browser width */
-    height:100%; /* take full browser height*/
-}
+
 
 #maindiv{
     display: flex;
@@ -13,6 +8,7 @@ html, body {
     margin-right: auto;
     flex-direction: column;
     max-width: 400px;
+    padding: 10px;
 }
 
 #divsubmit {
