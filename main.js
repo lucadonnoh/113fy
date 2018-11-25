@@ -17,17 +17,66 @@ function _113fy()
 
 function ToClipboard() {
     
-    /* Get the text field */
-    var copyText = document.getElementById("outlink");
-  
-    /* Select the text field */
-    copyText.select();
-  
-    /* Copy the text inside the text field */
-    document.execCommand("copy");
+    if(iOS())
+    {
+        iosCopyToClipboard();
+    }
+    else
+    {
+        /* Get the text field */
+        var copyText = document.getElementById("outlink");
+    
+        /* Select the text field */
+        copyText.select();
+    
+        /* Copy the text inside the text field */
+        document.execCommand("copy");
+    }
 
     displayBlock();
   }
+
+  function iOS() {
+    var iDevices = [
+      'iPad Simulator',
+      'iPhone Simulator',
+      'iPod Simulator',
+      'iPad',
+      'iPhone',
+      'iPod'
+    ];
+  
+    if (!!navigator.platform) {
+      while (iDevices.length) {
+        if (navigator.platform === iDevices.pop()){ return true; }
+      }
+    }
+  
+    return false;
+  }
+
+  function iosCopyToClipboard() {
+    var el = document.getElementById("outlink");
+
+    var oldContentEditable = el.contentEditable,
+        oldReadOnly = el.readOnly,
+        range = document.createRange();
+
+    el.contentEditable = true;
+    el.readOnly = false;
+    range.selectNodeContents(el);
+
+    var s = window.getSelection();
+    s.removeAllRanges();
+    s.addRange(range);
+
+    el.setSelectionRange(0, 999999); // A big number, to cover anything that could be inside the element.
+
+    el.contentEditable = oldContentEditable;
+    el.readOnly = oldReadOnly;
+
+    document.execCommand('copy');
+}
 
 function toggleDisplay() {
     var x = document.getElementById("success");
