@@ -13,8 +13,9 @@
     <div id="maindiv" class="container-fluid">
         <header id="header" class="display-1">113fy</header>
         <label for="basic-url">Your URL</label>
+        
         <div class="input-group mb-3">
-            <input type="text" id="inlink" class="form-control" placeholder="Insert here the link" aria-describedby="basic-addon2">
+            <input type="text" id="inlink" class="form-control" placeholder="Insert the link here" aria-describedby="basic-addon2">
             <div class="input-group-append">
                 <button class="btn btn-outline-secondary" type="button" onclick="_113fy()">113fy</button>
             </div>
@@ -24,7 +25,8 @@
                 <input type="text" id="outlink" class="form-control" placeholder="Output" aria-describedby="basic-addon2">
                 <div class="input-group-append">
                     <button class="btn btn-outline-secondary" type="button" data-dismiss="alert" onclick="ToClipboard()">Copy</button>
-                </div>
+        </div>
+        
         </div>
         <div class="alert alert-success container-fluid alert-dismissible fade show" style="display: none" role="alert" id="success">
             <strong>Well done!</strong> You successfully copied the link.
@@ -32,7 +34,17 @@
                 <span aria-hidden="true">&times;</span>
             </button>
         </div>
+
+        <div class="input-group mb-3">
+            <input type="text" id="infidelitylink" class="form-control" placeholder="Search for fidelity links" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button" onclick="popitup(fidelityURLBuilder())">Search</button>
+            </div>
+        </div>
+
     </div>
+
+
 </body>
 </html>
 

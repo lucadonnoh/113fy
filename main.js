@@ -1,5 +1,5 @@
 
-//this is the main function, which get the link and 113fies it.
+//this is the main function, which gets the link and 113fies it.
 function _113fy()
 {
     var link = document.getElementById("inlink").value;
@@ -17,6 +17,41 @@ function _113fy()
 
     displayNone();
 }
+
+function fidelityURLBuilder()
+{
+    var link = document.getElementById("infidelitylink").value;
+    var splittedlink = link.split(" ");
+    var dividedbyscoreslink = "https://news.fidelityhouse.eu/?s=";
+
+    for(var i = 0; i<splittedlink.length; i++)
+    {
+        dividedbyscoreslink += splittedlink[i];
+        if(i != splittedlink.length - 1)
+        {
+            dividedbyscoreslink += "+";
+        }
+    }
+
+    return dividedbyscoreslink;
+}
+
+//function to open a popup web page
+function popitup(url) {
+
+    var width = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width;
+    var height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height;
+
+
+    var left = ((width / 2) - (600 / 2));
+    var top = ((height / 2) - (600 / 2));
+	newwindow=window.open(url,'name','height=650,width=650,top='+ top + ',left='+left);
+	if (window.focus) {newwindow.focus()}
+	return false;
+}
+
+
+
 
 function cleanLink(link)
 {
