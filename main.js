@@ -18,6 +18,7 @@ function _113fy()
     displayNone();
 }
 
+//a function that builds the fidelity search query
 function fidelityURLBuilder()
 {
     var link = document.getElementById("infidelitylink").value;
@@ -50,9 +51,7 @@ function popitup(url) {
 	return false;
 }
 
-
-
-
+//to clean dirty links
 function cleanLink(link)
 {
     var splittedbyquestionmark = link.split("?");
