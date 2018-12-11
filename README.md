@@ -22,7 +22,9 @@ A Fidelity link with a medium different from 113.
 
 ## How to 113fy a link
 
-The first text-box is for clean or dirty links. By clicking the **113fy** button, the 113fied link will be displayed in the second text-box. The **copy** button permits to automatically copy the 113fied link.
+The first text-box is for clean or dirty links.   
+By clicking the **113fy** button, the 113fied link will be displayed in the second text-box.   
+The **copy** button permits to automatically copy the 113fied link.
 
 ## How the 113fy function works
 
