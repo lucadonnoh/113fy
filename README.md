@@ -1,6 +1,6 @@
 # 113fy
 
-GitBook link for better visualization: [https://donnoh99.gitbook.io/workspace/](https://donnoh99.gitbook.io/workspace/)
+GitBook link for better visualization: [https://lucadonnoh.gitbook.io/workspace/](https://lucadonnoh.gitbook.io/workspace)
 
 ## Some terminology
 
