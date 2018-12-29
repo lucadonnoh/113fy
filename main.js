@@ -18,6 +18,13 @@ function _113fy()
     displayNone();
 }
 
+function cleanAll()
+{
+    displayNone();
+    document.getElementById("inlink").value = "";
+    document.getElementById("outlink").value = "";
+}
+
 //a function that builds the fidelity search query
 function fidelityURLBuilder()
 {
@@ -40,9 +47,10 @@ function fidelityURLBuilder()
 //function to open a popup web page
 function popitup(url) {
 
+    cleanAll();
+
     var width = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width;
     var height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height;
-
 
     var left = ((width / 2) - (600 / 2));
     var top = ((height / 2) - (600 / 2));
