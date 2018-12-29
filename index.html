@@ -22,7 +22,8 @@
     <link rel="icon" sizes="192x192" href="icon-hd.png">
     <!-- Android Devices Normal Resolution -->
     <link rel="icon" sizes="128x128" href="icon.png">
-    <script src="main.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" rel="stylesheet"/>
 </head>
 <body class="bg-dark text-white">
@@ -33,7 +34,7 @@
         <div class="input-group mb-3">
             <input type="text" id="inlink" class="form-control" onfocus="this.select();" placeholder="Insert the link here" aria-describedby="basic-addon2">
             <div class="input-group-append">
-                <button class="btn btn-outline-secondary" type="button" onclick="_113fy()">113fy</button>
+                <button id="btn113fy" class="btn btn-outline-secondary" type="button" onclick="_113fy()">113fy</button>
             </div>
         </div>
     
@@ -63,4 +64,5 @@
 
 </body>
 </html>
+<script src="main.js"></script>
 

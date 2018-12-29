@@ -1,3 +1,17 @@
+$(document).ready(function(){
+    var input = document.getElementById("inlink");
+    input.addEventListener("keyup", function(event){
+    event.preventDefault();
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) 
+    {
+        // Trigger the button element with a click
+        document.getElementById("btn113fy").click();
+    }
+    });
+}
+);
+
 
 //this is the main function, which gets the link and 113fies it.
 function _113fy()
